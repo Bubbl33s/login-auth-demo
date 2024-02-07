@@ -16,7 +16,7 @@ signinForm.addEventListener('submit', async e => {
 
         const modal = bootstrap.Modal.getInstance(document.getElementById('signin-modal'));
         modal.hide();
-        alert('Welcome ' + credentials.email);
+        alert('Welcome ' + credentials.user.email);
     }
     catch (error) {
         if (error.code === 'auth/wrong-password') {
