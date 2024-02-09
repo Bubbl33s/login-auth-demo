@@ -1,10 +1,10 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { auth } from "../app/firebase.js";
+import { auth } from "./firebase/firebase.js";
 
-import '../app/signup_form.js';
-import '../app/signin_form.js';
-import '../app/logout.js';
-import { loginCheck } from '../app/app/login_check.js';
+import './firebase/signup_form.js';
+import './firebase/signin_form.js';
+import './firebase/logout.js';
+import { loginCheck } from './firebase/login_check.js';
 
 onAuthStateChanged(auth, async (user) => {
     if (user) {
